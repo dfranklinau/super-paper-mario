@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta stuff. -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Title stuff. -->
+		<title>Super Paper Mario 8-bit animation</title>
+
+		<!-- Stylesheet stuff. -->
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body>
+
+		<div id="mario">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 401">
+				<g id="outline" fill="none" stroke="#000000" stroke-width="2">
+					<path id="outline__nose" d="M275 125.5v25H175v-25h25v-75h-25v50h50v25h75v-25h-25v-25h-50v-25" class="cls-1"/>
+					<path id="outline__hat" d="M75 150.5H25v-75h25v-50h25V.5h125v25h75v25H50" class="cls-1"/>
+					<path id="outline__jaw"  d="M250,150.5v25H75V75.5H50L49.5,125h75V100h-25V75h25V50"/>
+					<path id="outline__arm-left" d="M0,250.5H50v25H75v25H50v25H0v-100H25v-25H50v-25H75"/>
+					<path id="outline__arm-right" d="M200,175.5v25h75v25h25v100H250v-25H225v-25h25v-25h50"/>
+					<path id="outline__overalls" d="M75,275.5v-25h50v25H100v-100h25v50h50v-25h25v75H175v-25h50v25"/>
+					<path id="outline__leg-left" d="M50,325.5v25"/>
+					<path id="outline__leg-right" d="M250,350.5v-25"/>
+					<path id="outline__feet" d="M200,350.5h75v25h25v25H200v-50H175v-25H125v25H100v50H0v-25H25v-25h75"/>
+				</g>
+				<g id="fill">
+					<path d="M75 75.5v50H50v-50zm100 0v-25h-50v25h-25v25h25v25H75v50h175v-25h-75v-25h25v-25h-25zm125 50v-25h-25v-25h-50v-25h-25v50h25v25zm-50 125v25h-25v25h25v25h50v-75zm-50 0h-25v25h25zm-75 0h-25v25h25zm-75 25v-25H0v75h50v-25h25v-25z" fill="#E39D25"/>
+					<path d="M100 75.5v25h25v25H75v-50H50v-25h75v25zm-50 0H25v75h50v-25H50zm175 50v-25h-25v25h-25v25h100v-25zm-50-75v50h25v-50zm-125 125v25H25v25H0v25h50v25h25v-25h25v-75zm125 0h-50v50h50v-25h25v-25zm100 50v-25h-75v50h25v25h25v-25h50v-25zm-250 125v25H0v25h100v-50zm250 25v-25h-75v50h100v-25z" fill="#6a6b04"/>
+					<path d="M275 25.5v25H50v-25h26V.5h124v25zm-50 275v-50h-25v25h-25v-25h25v-50h-25v25h-50v-50h-25v75h25v25h-25v-25H75v50H50v50h75v-25h50v25h75v-50z" fill="#b13425"/>
+				</g>
+			</svg>
+		</div>
+
+		<!-- Script stuff. -->
+		<script src="scripts/vendor/animejs/anime.min.js"></script>
+		<script src="scripts/main.js"></script>
+
+	</body>
+</html>
