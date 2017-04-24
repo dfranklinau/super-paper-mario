@@ -14,22 +14,40 @@
 	<body>
 
 		<div id="mario">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 401">
-				<g id="outline" fill="none" stroke="#000000" stroke-width="2">
-					<path id="outline__nose" d="M275 125.5v25H175v-25h25v-75h-25v50h50v25h75v-25h-25v-25h-50v-25" class="cls-1"/>
-					<path id="outline__hat" d="M75 150.5H25v-75h25v-50h25V.5h125v25h75v25H50" class="cls-1"/>
-					<path id="outline__jaw"  d="M250,150.5v25H75V75.5H50L49.5,125h75V100h-25V75h25V50"/>
-					<path id="outline__arm-left" d="M75,175.5H50v25H25v25H0v100H50v-25H75v-25H50v-25H0"/>
-					<path id="outline__arm-right" d="M200,175.5v25h75v25h25v100H250v-25H225v-25h25v-25h50"/>
-					<path id="outline__overalls" d="M75,275.5v-25h50v25H100v-100h25v50h50v-25h25v75H175v-25h50v25"/>
-					<path id="outline__leg-left" d="M50,325.5v25"/>
-					<path id="outline__leg-right" d="M250,350.5v-25"/>
-					<path id="outline__feet" d="M200,350.5h75v25h25v25H200v-50H175v-25H125v25H100v50H0v-25H25v-25h75"/>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16">
+				<g id="outline" fill="none" stroke="#000000" stroke-width="0.05">
+					<path id="outline__nose" d="M9 2 V3 H11 V4 H12 V5 H9 V4 H7 V2 H8 V5 H7 V6 H11 V5"/>
+					<path id="outline__hat" d="M3 6 H1 V3 H2 V1 H3 V0 H8 V1 H11 V2 H2"/>
+					<path id="outline__jaw"  d="M10 6 V7 H3 V3 H2 V5 H5 V4 H4 V3 H5 V2"/>
+					<path id="outline__arm-left" d="M3 7 H2 V8 H1 V9 H0 V13 H2 V12 H3 V11 H2 V10 H0"/>
+					<path id="outline__arm-right" d="M8 7 V8 H11 V9 H12 V13 H10 V12 H9 V11 H10 V10 H12"/>
+					<path id="outline__overalls" d="M9 11 V10 H7 V11 H8 V8 H7 V9 H5 V7 H4 V11 H5 V10 H3 V11"/>
+					<path id="outline__leg-left" d="M2 13 V14"/>
+					<path id="outline__leg-right" d="M10 13 V14"/>
+					<path id="outline__feet" d="M8 14 H11 V15 H12 V16 H8 V14 H7 V13 H5 V14 H4 V16 H0 V15 H1 V14 H4"/>
 				</g>
 				<g id="fill">
-					<path d="M75 75.5v50H50v-50zm100 0v-25h-50v25h-25v25h25v25H75v50h175v-25h-75v-25h25v-25h-25zm125 50v-25h-25v-25h-50v-25h-25v50h25v25zm-50 125v25h-25v25h25v25h50v-75zm-50 0h-25v25h25zm-75 0h-25v25h25zm-75 25v-25H0v75h50v-25h25v-25z" fill="#E39D25"/>
-					<path d="M100 75.5v25h25v25H75v-50H50v-25h75v25zm-50 0H25v75h50v-25H50zm175 50v-25h-25v25h-25v25h100v-25zm-50-75v50h25v-50zm-125 125v25H25v25H0v25h50v25h25v-25h25v-75zm125 0h-50v50h50v-25h25v-25zm100 50v-25h-75v50h25v25h25v-25h50v-25zm-250 125v25H0v25h100v-50zm250 25v-25h-75v50h100v-25z" fill="#6a6b04"/>
-					<path d="M275 25.5v25H50v-25h26V.5h124v25zm-50 275v-50h-25v25h-25v-25h25v-50h-25v25h-50v-50h-25v75h25v25h-25v-25H75v50H50v50h75v-25h50v25h75v-50z" fill="#b13425"/>
+					<path id="fill__red" fill="#FE1F19"
+					  d="M2 2 V1 H3 V0 H8 V1 H11 V2 H2 Z
+					     M4 7 H5 V9 H7 V8 H8 V10 H7 V11 H8 V10 H9 V12 H10 V14 H7 V13 H5 V14 H2 V12 H3 V10 H4 V11 H5 V10 H4 V7 Z"/>
+					<path id="fill__orange" fill="#FA9D40"
+					  d="M2 3 H3 V5 H2 V3 Z
+					     M5 2 H7 V4 H8 V5 H7 V6 H10 V7 H3 V5 H5 V4 H4 V3 H5 V2 Z
+					     M8 2 H9 V3 H11 V4 H12 V5 H9 V4 H8 V2 Z
+					     M0 10 H2 V11 H3 V12 H2 V13 H0 V10 Z
+					     M10 10 H12 V13 H10 V12 H9 V11 H10 V10 Z
+					     M4 10 H5 V11 H4 V10 Z
+					     M7 10 H8 V11 H7 V10 Z"/>
+					<path id="fill__brown" fill="#82640D"
+					  d="M1 3 H2 V5 H3 V6 H1 V3 Z
+					     M2 2 H5 V3 H4 V4 H5 V5 H3 V3 H2 V2 Z
+					     M7 2 H8 V4 H7 V2 Z
+					     M8 4 H9 V5 H11 V6 H7 V5 H8 V4 Z
+					     M5 7 H8 V8 H7 V9 H5 V7 Z
+					     M8 8 H11 V9 H12 V10 H10 V11 H9 V10 H8 V8 Z
+					     M0 9 H1 V8 H2 V7 H4 V10 H3 V11 H2 V10 H0 V9 Z
+					     M0 16 V15 H1 V14 H4 V16 H0 Z
+					     M8 16 V14 H11 V15 H12 V16 H8 Z"/>
 				</g>
 			</svg>
 		</div>
