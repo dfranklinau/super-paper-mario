@@ -9,8 +9,8 @@ anime({
 	targets: '#outline__hat',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
-	duration: 2000,
-	delay: 400
+	duration: 2500,
+	delay: 2000
 });
 
 anime({
@@ -18,7 +18,7 @@ anime({
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
-	delay: 400
+	delay: 2000
 });
 
 anime({
@@ -26,7 +26,7 @@ anime({
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
-	delay: 400
+	delay: 2000
 });
 
 anime({
@@ -34,7 +34,7 @@ anime({
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
-	delay: 400
+	delay: 2000
 });
 
 anime({
@@ -42,29 +42,45 @@ anime({
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
-	delay: 600
+	delay: 4000
 });
 
 anime({
 	targets: '#outline__feet',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
-	duration: 3500,
-	delay: 400
+	duration: 3000,
+	delay: 4000
 });
 
 anime({
 	targets: '#outline__leg-left',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
-	duration: 2000,
-	delay: 800
+	duration: 200,
+	delay: 6750
 });
 
 anime({
 	targets: '#outline__leg-right',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
-	duration: 2000,
-	delay: 800
+	duration: 200,
+	delay: 4000
+});
+
+anime({
+	targets: '#outline',
+	opacity: 0,
+	easing: 'linear',
+	duration: 1000,
+	delay: 8000
+});
+
+anime({
+	targets: '#fill',
+	opacity: 1,
+	easing: 'linear',
+	duration: 1000,
+	delay: 8000
 });
