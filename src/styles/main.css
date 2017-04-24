@@ -4,17 +4,17 @@
  */
 
 body {
-  background: #f5f5f5;
+	background: #f5f5f5;
 }
 
 #mario {
-  width: 400px;
+	width: 400px;
 }
 
-  #mario > svg {
-    display: block;
-    padding: 5px;
-  }
+#mario > svg {
+	display: block;
+	padding: 5px;
+}
 
 #fill {
 	opacity: 0;
