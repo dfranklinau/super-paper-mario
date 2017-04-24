@@ -13,9 +13,9 @@ body {
 
   #mario > svg {
     display: block;
-    padding: 16px;
+    padding: 5px;
   }
 
 #fill {
-  display: none;
+	opacity: 0;
 }
