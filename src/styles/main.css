@@ -60,31 +60,59 @@ body {
   #MARIO
 \*---------------------------------------------------------------------------*/
 
+/**
+ * The container for the Mario `<svg>`.
+ */
 .mario {
 	position: absolute;
-	bottom: 0;
+	z-index: 2;
+	bottom: 119.21875px;
 	left: 50%;
-	margin-left: -75px;
-	width: 150px;
-	height: 150px;
+	margin-left: -100px;
 }
 
+	/**
+	 * The padding is used to offset the SVG by half of the stroke's width.
+	 * Because the stroke width is relative to the width, some minor calculations
+	 * have to be done to work out the stroke width:
+	 *
+	 * = ((width / viewBox width) * stroke-width) / 2
+	 * = ((200px / 16) * 0.125) / 2
+	 * = (12.5px * 0.125) / 2
+	 * = 1.5625px / 2
+	 * = 0.78125px
+	 */
 	.mario > svg {
 		display: block;
+		padding: 0.78125px;
+		width: 200px;
 	}
 
+/**
+ * This hides the colours of Mario on load.
+ */
 .mario .state--idle .fill {
 	opacity: 0;
 }
 
+/**
+ * Mario's hide frame is hidden when he is in his "idle" state.
+ */
 .mario.is-idle .state--jump {
 	display: none;
 }
 
+/**
+ * Mario's jump frame is hidden when he is in his "jump" state.
+ */
 .mario.is-jumping .state--idle {
 	display: none;
 }
 
+/**
+ * When Mario is jumping, shift the entire object to create a more fluid
+ * jumping animation.
+ */
 .mario.is-jumping svg {
 	transform: translateX(-9.375px) translateY(-9.375px);
 }
