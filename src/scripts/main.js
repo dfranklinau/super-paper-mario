@@ -98,12 +98,18 @@ anime({
 	duration: 1000,
 	delay: 7500,
 	complete: (anim) => {
-		attachKeyboardEvent();
+		addJumpEventListeners();
 	}
 });
 
-function attachKeyboardEvent() {
+function addJumpEventListeners() {
 	window.addEventListener('keydown', testSpaceBarPress, false);
+	window.addEventListener('touchstart', jump, false);
+}
+
+function removeJumpEventListeners() {
+	window.removeEventListener('keydown', testSpaceBarPress);
+	window.removeEventListener('touchstart', jump);
 }
 
 function testSpaceBarPress(event) {
@@ -115,7 +121,7 @@ function testSpaceBarPress(event) {
 function jump() {
 	mario.classList.remove('is-idle');
 	mario.classList.add('is-jumping');
-	window.removeEventListener('keydown', testSpaceBarPress);
+	removeJumpEventListeners();
 
 	anime({
 		targets: '.mario',
@@ -133,7 +139,7 @@ function jump() {
 		complete: (anim) => {
 			mario.classList.remove('is-jumping');
 			mario.classList.add('is-idle');
-			attachKeyboardEvent();
+			addJumpEventListeners();
 		}
 	});
 }

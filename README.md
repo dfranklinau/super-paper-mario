@@ -18,7 +18,7 @@ gradients.
 The line and jumping animations are performed using the JavaScript animation
 engine, [anime.js](http://anime-js.com).
 
-Be sure to press Space once Mario has finished animating!
+Be sure to press Space (or tap) when Mario has finished animating!
 
 
 Resources used
