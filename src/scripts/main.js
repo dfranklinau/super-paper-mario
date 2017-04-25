@@ -1,12 +1,12 @@
 anime({
-	targets: '#outline__nose',
+	targets: '.mario .state--idle .outline__nose',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000
 });
 
 anime({
-	targets: '#outline__hat',
+	targets: '.mario .state--idle .outline__hat',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2500,
@@ -14,7 +14,7 @@ anime({
 });
 
 anime({
-	targets: '#outline__jaw',
+	targets: '.mario .state--idle .outline__jaw',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
@@ -22,7 +22,7 @@ anime({
 });
 
 anime({
-	targets: '#outline__arm-left',
+	targets: '.mario .state--idle .outline__arm-left',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
@@ -30,7 +30,7 @@ anime({
 });
 
 anime({
-	targets: '#outline__arm-right',
+	targets: '.mario .state--idle .outline__arm-right',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
@@ -38,7 +38,7 @@ anime({
 });
 
 anime({
-	targets: '#outline__overalls',
+	targets: '.mario .state--idle .outline__overalls',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 2000,
@@ -46,7 +46,7 @@ anime({
 });
 
 anime({
-	targets: '#outline__feet',
+	targets: '.mario .state--idle .outline__feet',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 3000,
@@ -54,7 +54,7 @@ anime({
 });
 
 anime({
-	targets: '#outline__leg-left',
+	targets: '.mario .state--idle .outline__leg-left',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 200,
@@ -62,7 +62,7 @@ anime({
 });
 
 anime({
-	targets: '#outline__leg-right',
+	targets: '.mario .state--idle .outline__leg-right',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
 	duration: 200,
@@ -70,7 +70,7 @@ anime({
 });
 
 anime({
-	targets: '#outline',
+	targets: '.mario .state--idle .outline',
 	opacity: 0,
 	easing: 'linear',
 	duration: 1000,
@@ -78,7 +78,7 @@ anime({
 });
 
 anime({
-	targets: '#fill',
+	targets: '.mario .state--idle .fill',
 	opacity: 1,
 	easing: 'linear',
 	duration: 1000,

@@ -1,21 +1,33 @@
-/**
- * index.scss
- * - Add any styles you want here!
- */
+* {
+	box-sizing: border-box;
+}
 
 body {
-	background: #f5f5f5;
+	margin: 0;
+	padding: 0;
 }
 
-#mario {
-	width: 400px;
+.mario {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -75px;
+	width: 150px;
+	height: 150px;
 }
 
-#mario > svg {
-	display: block;
-	padding: 5px;
-}
+	.mario > svg {
+		display: block;
+	}
 
-#fill {
+.mario .state--idle .fill {
 	opacity: 0;
+}
+
+.mario.is-idle .state--jump {
+	display: none;
+}
+
+.mario.is-jumping .state--idle {
+	display: none;
 }
