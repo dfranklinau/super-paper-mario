@@ -1,3 +1,6 @@
+const mario = document.getElementById('js-mario');
+let isJumping = false;
+
 anime({
 	targets: '.mario .state--idle .outline__nose',
 	strokeDashoffset: [anime.setDashoffset, 0],
@@ -82,5 +85,44 @@ anime({
 	opacity: 1,
 	easing: 'linear',
 	duration: 1000,
-	delay: 8000
+	delay: 8000,
+	complete: (anim) => {
+		attachKeyboardEvent();
+	}
 });
+
+function attachKeyboardEvent() {
+	window.addEventListener('keydown', testSpaceBarPress, false);
+}
+
+function testSpaceBarPress(event) {
+	if (event.code === 'Space') {
+		animateJump();
+	}
+}
+
+function animateJump() {
+	mario.classList.remove('is-idle');
+	mario.classList.add('is-jumping');
+	window.removeEventListener('keydown', testSpaceBarPress);
+
+	anime({
+		targets: '.mario',
+		translateY: [
+			{
+				value: -300,
+				duration: 200,
+				easing: 'easeOutQuad',
+			},{
+				value: 0,
+				duration: 200,
+				easing: 'easeInQuad'
+			},
+		],
+		complete: (anim) => {
+			mario.classList.remove('is-jumping');
+			mario.classList.add('is-idle');
+			attachKeyboardEvent();
+		}
+	});
+}

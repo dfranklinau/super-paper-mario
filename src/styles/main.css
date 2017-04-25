@@ -31,3 +31,7 @@ body {
 .mario.is-jumping .state--idle {
 	display: none;
 }
+
+.mario.is-jumping svg {
+	transform: translateX(-9.375px) translateY(-9.375px);
+}
