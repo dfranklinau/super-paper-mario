@@ -1,5 +1,13 @@
+/**
+ * Super Paper Mario, wahoo.
+ *
+ * Below are a series of initial calles to animejs to animate the lines.
+ * The durations and delays were calculated based on judgement. Once the final
+ * line animates (the left leg), Mario is filled in with colour. When the
+ * colour finishes fading an event gets attached to allow Mario to jump.
+ */
+
 const mario = document.getElementById('js-mario');
-let isJumping = false;
 
 anime({
 	targets: '.mario .state--idle .outline__nose',
@@ -57,14 +65,6 @@ anime({
 });
 
 anime({
-	targets: '.mario .state--idle .outline__leg-left',
-	strokeDashoffset: [anime.setDashoffset, 0],
-	easing: 'linear',
-	duration: 200,
-	delay: 6750
-});
-
-anime({
 	targets: '.mario .state--idle .outline__leg-right',
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: 'linear',
@@ -73,11 +73,19 @@ anime({
 });
 
 anime({
+	targets: '.mario .state--idle .outline__leg-left',
+	strokeDashoffset: [anime.setDashoffset, 0],
+	easing: 'linear',
+	duration: 200,
+	delay: 6750
+});
+
+anime({
 	targets: '.mario .state--idle .outline',
 	opacity: 0,
 	easing: 'linear',
 	duration: 1000,
-	delay: 8000
+	delay: 7500
 });
 
 anime({
@@ -85,7 +93,7 @@ anime({
 	opacity: 1,
 	easing: 'linear',
 	duration: 1000,
-	delay: 8000,
+	delay: 7500,
 	complete: (anim) => {
 		attachKeyboardEvent();
 	}
@@ -97,11 +105,11 @@ function attachKeyboardEvent() {
 
 function testSpaceBarPress(event) {
 	if (event.code === 'Space') {
-		animateJump();
+		jump();
 	}
 }
 
-function animateJump() {
+function jump() {
 	mario.classList.remove('is-idle');
 	mario.classList.add('is-jumping');
 	window.removeEventListener('keydown', testSpaceBarPress);
