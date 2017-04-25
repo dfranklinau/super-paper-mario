@@ -1,5 +1,8 @@
 /**
- * Super Paper Mario, wahoo.
+ * Super Paper Mario 8-bit animation, wahoo.
+ *
+ * PRESS SPACE TO JUMP WHEN MARIO HAS FINISHED DRAWING; 
+ * TOO LAZY TO ADD ON-SCREEN INSTRUCTIONS LOL.
  *
  * Below are a series of initial calles to animejs to animate the lines.
  * The durations and delays were calculated based on judgement. Once the final
