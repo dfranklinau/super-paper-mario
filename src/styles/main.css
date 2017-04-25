@@ -21,33 +21,129 @@ body {
   #BACKGROUND
 \*---------------------------------------------------------------------------*/
 
-.background {
+/**
+ * The generic blue sky background.
+ */
+.sky {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-color: #96DBEE;
 }
 
-.background::before {
+/**
+ * The 'top of the sky' dark blue gradient lines. The line stops are calculated
+ * using percentages, which _should_ align with the pixel grid regardless of
+ * height (assuming the size of the grid is resized relative to the height).
+ *
+ * However, for whatever reason, the grid never aligns if the size of the grid
+ * is not an integer.
+ */
+.sky::before {
 	display: block;
 	position: absolute;
 	z-index: 0;
 	width: 100%;
-	height: 300px;
-	background-image: linear-gradient(to bottom, #50B2DC 0%, #6FC3DC 55%, transparent 55%, transparent 60%, #6FC3DC 60%, #6FC3DC 65%, transparent 65%, transparent 95%, #6FC3DC 95%);
+	height: 400px;
+	background-image:
+	  linear-gradient(to bottom,
+	    #50B2DC 0%,
+	    #6FC3DC 55%,
+	    transparent 55%,
+	    transparent 60%,
+	    #6FC3DC 60%,
+	    #6FC3DC 65%,
+	    transparent 65%,
+	    transparent 95%,
+	    #6FC3DC 95%);
 	background-repeat: repeat-x;
 	content: "";
 }
 
-.background::after {
+/**
+ * The pixel grid for the sky.
+ */
+.sky::after {
 	display: block;
 	position: absolute;
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.125) 2.5%, transparent 2.5%, transparent 97.5%, rgba(0, 0, 0, 0.125) 97.5%),
-	                  linear-gradient(to bottom, rgba(0, 0, 0, 0.125) 2.5%, transparent 2.5%, transparent 97.5%, rgba(0, 0, 0, 0.125) 97.5%);
-	background-size: 15px 15px;
+	background-image:
+	  linear-gradient(to right,
+	    rgba(0, 0, 0, 0.125) 5%,
+	    transparent 5%,
+	    transparent 95%,
+	    rgba(0, 0, 0, 0.125) 95%),
+	  linear-gradient(to bottom,
+	    rgba(0, 0, 0, 0.125) 5%,
+	    transparent 5%,
+	    transparent 95%,
+	    rgba(0, 0, 0, 0.125) 95%);
+	background-size: 20px 20px;
+	background-repeat: repeat;
+	content: "";
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  #GROUND
+\*---------------------------------------------------------------------------*/
+
+.ground {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+	height: 120px;
+	background-color: #BA7603;
+}
+
+.ground::before {
+	display: block;
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 120px;
+	background-image:
+	  linear-gradient(to bottom,
+	    #048809 16.667%,
+	    #056103 16.667%,
+	    #056103 33.333%,
+	    #985603 33.333%,
+	    #985603 50%,
+	    #B67C0A 50%,
+	    #B67C0A 66.667%,
+	    #B57A04 66.667%,
+	    #B57A04 83.333%,
+	    #CB8804 83.333%);
+	background-size:
+	  20px 120px;
+	content: "";
+}
+
+.ground::after {
+	display: block;
+	position: absolute;
+	z-index: 0;
+	border-top: 1px solid #5D3B01;
+	width: 100%;
+	height: 100%;
+	background-image:
+	  linear-gradient(to right,
+	    rgba(0, 0, 0, 0.5) 5%,
+	    transparent 5%,
+	    transparent 95%,
+	    rgba(0, 0, 0, 0.5) 95%),
+	    linear-gradient(to bottom,
+	    rgba(0, 0, 0, 0.5) 5%,
+	    transparent 5%,
+	    transparent 95%,
+	    rgba(0, 0, 0, 0.5) 95%);
+	background-size: 20px 20px;
 	background-repeat: repeat;
 	content: "";
 }
