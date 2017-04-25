@@ -110,7 +110,7 @@ function animateJump() {
 		targets: '.mario',
 		translateY: [
 			{
-				value: -300,
+				value: -225,
 				duration: 200,
 				easing: 'easeOutQuad',
 			},{
