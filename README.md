@@ -1,6 +1,11 @@
 Super Paper Mario 8-bit animation
 ================================================================================
 
+![A screenshot of the CodePen demo](screenshot.png)
+
+[Check out the demo on CodePen now.](https://codepen.io/dfranklinau/details/EmgzmO/)
+
+
 Super-paper-what-now?
 --------------------------------------------------------------------------------
 
